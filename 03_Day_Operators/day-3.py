@@ -196,3 +196,25 @@ print(int('10') == 10) # True, string 10 is converted to integer
 print(float(9.8) == 10) # False, 9.8 is not equal to 10
 print(int(9.8) == 10) # False, 9.8 is converted to 9
 print(round(9.8) == 10) # True, 9.8 is rounded to 10
+
+
+def calculatePay():
+    hours = input('Enter hours: ')
+    rate = input('Enter rate per hour: ')
+    pay = float(hours) * float(rate)
+    print('Your weekly earning is ', pay)
+    return pay
+
+print('Calculate hour rate')
+#calculatePay()
+
+def calculateAgeInSec():
+    age = input('Enter your age in years-month-day format:')
+    years,months,days = age.split('-')
+    
+    age_in_sec = float(years) * 365 * 24 * 60 * 60 + float(months) * 30 * 24 * 60 * 60 + float(days) * 24 * 60 * 60
+    print('You have lived for ', age_in_sec, ' seconds.')
+    return age_in_sec
+
+print('Calculate your age in seconds')
+calculateAgeInSec()
